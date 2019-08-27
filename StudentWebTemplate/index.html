@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Name: Boilerplate
+Version: v1.3
+Last Updated: 4/24/2013
+Author: George Hadley
+License: Released for free under a Creative Commons Attribution 2.5 License
+
+This website was based upon a number of source materials, which are elaborated upon in credits.txt
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!-- Python SimpleHTTPServer Testing -->
+<!--<base href="/http://localhost:8000/" />-->
+<!-- ECE477 preview URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/preview/" />-->
+<!-- ECE477 final URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/" />-->
+
+<!--Content-->
+<title>ECE477 Homepage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="/default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+		<!-- Instantiate global site header.-->
+		<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+		<!-- Instantiate slideshow module. All slideshow images should be 1100px x 500px and stored in ./img/slideshow-->
+		<div id="slideshow"></div>
+		<!-- Instantiate main page content. All page content should be added to about.html -->
+		<div id="content">
+            <h2>Project Overview:</h2> This is the place to talk about your project. What problem does it address? How does/might it work? How does it compare to competing methods and/or approaches to solving the problem? Summarize your initial project proposal in 1-3 paragraphs and put that information here.
+            
+            <h2>Project Specific Success Criteria:</h2>
+                <ol>
+                    <li>PSSC #1: An ability to....</li>
+                    <li>PSSC #2: An ability to....</li>
+                    <li>PSSC #3: An ability to....</li>
+                    <li>PSSC #4: An ability to....</li>
+                    <li>PSSC #5: An ability to....</li>
+                </ol>
+        </div>
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+	</div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#slideshow").load("slideshow.html");
+	//$("#content").load("about.html");
+	$("#footer").load("footer.html");
+});
+</script>
+
+</body>
+</html>
