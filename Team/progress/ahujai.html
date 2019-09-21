@@ -1,127 +1,80 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-This is an example weekly progress report document that team members can use to report their individual progress
-of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
-presented in the "Progress Report Policy" document, available online at https://engineering.purdue.edu/ece477/Course/Policies/policies.html
-
-Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
-the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
-contact course staff.
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
-<base href="https://engineering.purdue.edu/477grp1/" />
-
-<!--Content-->
-<title>ECE477 Course Documents</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="author" content="George Hadley">
-<meta name = "format-detection" content = "telephone=no" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<!--CSS-->
-<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/content.css">
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-
+  <base href="https://engineering.purdue.edu/477grp1/"></base>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+  <meta name="keywords" content=""></meta>
+  <meta name="description" content=""></meta>
+  <meta name="author" content="George Hadley"></meta>
+  <meta name = "format-detection" content = "telephone=no"></meta>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
+  
+  <link rel="stylesheet" href="css/default.css" type="text/css" media="all"></link>
+  <link rel="stylesheet" href="css/responsive.css"></link>
+  <link rel="stylesheet" href="css/styles.css"></link>
+  <link rel="stylesheet" href="css/content.css"></link>
+  
+  <title>ECE477 Course Documents</title>
 </head>
 <body>
-<div id="wrapper_site">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $("#header").load("header.html");
+    $("#menu").load("navbar.html");
+    $("#footer").load("footer.html");
+  });
+  </script>
+  
+  <div id="wrapper_site">
     <div id="wrapper_page">
-	<!-- Instantiate global site header.-->
-	<div id="header"></div>
-		<!-- Instantiate site global navigation bar.-->
-		<div id="menu"></div>
+      <div id="header"></div>
+  	  <div id="menu"></div>
+  	  <div id="banner"><img src="Files/img/BannerImgExample.jpg"></img></div>
+  		<div id="content">
+        <h2>Progress Report for Ishaan Ahuja</h2>
 
-		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
-			img folder located at this directory level. -->
-		<div id="banner">
-			<img src="Files/img/BannerImgExample.jpg"></img>
-		</div>
+        <h4>Week 2:</h4>
+          <b>Date: </b>08/30<br>
+          <b>Total hours: </b>15<br>
+          <b>Description of design efforts: </b><br>Began work on interfacing our chosen MCU STM32F051R8T6 due to familiarity from Rtvik, Abhay and Pratyaksh’s ECE 362. Currently interfacing the TMP36 and LDRs with the MCU using ADC channels 0 and 1 on Eclipse, and reading up more on STM32 architecture using the architecture manual from the ECE 362 website, as well as the datasheet for identifying the pins and available peripherals. Due to unfamiliarity with the STM, I will need to do more homework on calibrating values, as well as validating the data from the debug output. We will need to procure a heat gun/blow dryer to test the data.<br>
+          <img src="https://components101.com/sites/default/files/inline-images/Circuit-using-Tmp36-Temperature-sensor.png" height="400" width="450"></img><br>
+		    
+        <h4>Week 3:</h4>
+          <b>Date: </b>09/06<br>
+          <b>Total hours: </b>14<br>
+          <b>Description of design efforts:</b><br>
+          <b>What I worked on this week: </b>Interfaced the TCRT 5000 Infrared sensors successfully with the STM32F0 MCU. It is currently being tested using the Debugger mode, and reflects a voltage change upon object detection. Also spent some time refining the temperature sensor value flickers using a refined algorithm.<br>
+          <b>Things I learned this week: </b>I learned more about programming peripherals using ADC, Timers, and GPIO with STM32 as I had not encountered this in my ECE 362 microcontroller which used 9S12.<br>
+          <b>Challenges: </b>It was initially difficult to interface the STM32 due to unfamiliarity with the micro, but it went smoothly after assistance from the staff and my teammates. I also learned to use the System Workbench properly, with the debugger mode, some assembly programming, and keeping track of variables and registers.<br>
+          <b>Next week's tasks: </b>Next week will need simultaneous running of the STM32 peripherals TMP36 and the IR sensor, and if time permits the photoresistor also in that order. Below is an image of the TCRT 5000 circuit I have set up.<br>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.instructables.com/FC2/G3QM/IXKPSR27/FC2G3QMIXKPSR27.LARGE.jpg?auto=webp&&frame=1&width=1024&height=1024&fit=bounds" height="350" width="400"></img><br>
+		    
+        <h4>Week 4:</h4>
+          <b>Date: </b>09/13<br>
+          <b>Total hours: </b>11<br>
+          <b>Description of design efforts:</b><br> 
+          <b>What I worked on this week: </b>Finished up the TMP36 temperature sensor ADC code and demoed a debugger version to Dr. Thottethodi and GTA. It was working satisfactority but they vetoed against the heat gun for test due to possibility of damaging the plastics.<br>
+          <b>Things I learned this week: </b>I learned more about Timers in preparation for running asynchronous tasks and interrupt handlers.<br>
+          <b>Challenges: </b>Unfamiliarity with the timer modules and IRQ handlers on STM32.<br>
+          <b>Next week's tasks: </b>I will begin work on the Timers and running both the TMP36 and the IR Sensors together. The circuit for the LDR is to be changed as below.<br>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.build-electronic-circuits.com/wp-content/uploads/2013/11/LDR-circuit-improved-1024x729.png" height="270" width="400"></img><br>
 
-		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
-			and include things such as a file lister (for listing out homework assignments or tutorials)
-		-->
-		<div id="content">
-            <h2>Progress Report for Ishaan Ahuja</h2>
-
-            <h4>Week 2:</h4>
-            <b>Date:</b> 8/30<br>
-            <b>Total hours:</b> 15<br>
-            <b>Description of design efforts:</b><br>
-Began work on interfacing our chosen MCU STM32F051R8T6 due to familiarity from Rtvik, Abhay and Pratyaksh’s ECE 362. Currently interfacing the TMP36 and LDRs with the MCU using ADC channels 0 and 1 on Eclipse, and reading up more on STM32 architecture using the architecture manual from the ECE 362 website, as well as the datasheet for identifying the pins and available peripherals. Due to unfamiliarity with the STM, I will need to do more homework on calibrating values, as well as validating the data from the debug output. We will need to procure a heat gun/blow dryer to test the data.
-            <br>
-            <img src="https://components101.com/sites/default/files/inline-images/Circuit-using-Tmp36-Temperature-sensor.png" height="400" width="450"></img>
-            <br>
-		  <h4>Week 3:</h4>
-                  <b>Date:</b> 9/6-<br>
-                  <b>Total hours:</b> 14<br>
-                  <b>Description of design efforts:</b><br>
-                  <b> What I worked on this week: </b> Interfaced the TCRT 5000 Infrared sensors successfully with the STM32F0 MCU. It is currently being tested using the Debugger mode, and reflects a voltage change upon object detection. Also spent some time refining the temperature sensor value flickers using a refined algorithm. <br>
-                  <b> Things I learned this week: </b> I learned more about programming peripherals using ADC, Timers, and GPIO with STM32 as I had not encountered this in my ECE 362 microcontroller which used 9S12. <br>
-                  <b> Challenges: </b> It was initially difficult to interface the STM32 due to unfamiliarity with the micro, but it went smoothly after assistance from the staff and my teammates. I also learned to use the System Workbench properly, with the debugger mode, some assembly programming, and keeping track of variables and registers.<br>
-                  <b> Next week's tasks: </b> Next week will need simultaneous running of the STM32 peripherals TMP36 and the IR sensor, and if time permits the photoresistor also in that order. Below is an image of the TCRT 5000 circuit I have set up. <br>
-                  
-                  <img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.instructables.com/FC2/G3QM/IXKPSR27/FC2G3QMIXKPSR27.LARGE.jpg?auto=webp&&frame=1&width=1024&height=1024&fit=bounds" height="350" width="400"></img> 
-		  <h4>Week 4:</h4>
-                  <b>Date:</b> 9/13<br>
-                  <b>Total hours:</b> 11<br>
-                  <b>Description of design efforts:</b><br> 
-                  <b> What I worked on this week: </b> Finished up the TMP36 temperature sensor ADC code and demoed a debugger version to Dr. Thottethodi and GTA. It was working satisfactority but they vetoed against the heat gun for test due to possibility of damaging the plastics.<br>
-                  <b> Things I learned this week: </b> I learned more about Timers in preparation for running asynchronous tasks and interrupt handlers.<br>
-                  <b> Challenges: </b> Unfamiliarity with the timer modules and IRQ handlers on STM32.<br>
-                  <b> Next week's tasks: </b> I will begin work on the Timers and running both the TMP36 and the IR Sensors together. The circuit for the LDR is to be changed as below. <br>
-                  
-                  <img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.build-electronic-circuits.com/wp-content/uploads/2013/11/LDR-circuit-improved-1024x729.png" height="270" width="400"></img>
-
-		  <h4>Week 5:</h4>
-                  <b>Date:</b> 9/20<br>
-                  <b>Total hours:</b> 7<br>
-                  <b>Description of design efforts:</b><br> 
-                  <b> What I worked on this week: </b>I started working on USART to help Abhay since he was having problems with transmitting and receiving data from the STM32 and the computer terminal. We were able to successfully debug it and transmitted "HELLO" from the STM32 and received it on the computer terminal and hence now we have a fully functioning USART. I also worked on getting the the LDR sensor to send its data to the STM32 using the circuit in the image above and decode it. We will use the LDR sensor for sensing ambient light data and use it to automatically adjust the brightness of the mirror.<br>
-                  <b> Things I learned this week: </b>I learnt a lot about the USART protocol since I was only familiar with UART.<br>
-                  <b> Challenges: </b> Unfamiliarity with USART protocol made it difficult to debug but I was familiar with UART so it made it a lot easier to understand the synchronous and asynchronous things used in USART.<br>
-                  <b> Next week's tasks: </b>I will begin working on integrating the code for USART and will test sending sensor data over it.<br><br>
-                  
-                  <img style="display: block; margin-left: auto; margin-right: auto;" src="Team/progress/img/initusart.png" height="400" width="600"></img>
-	
-		  <!-- <h4>Week N:</h4>
-                  <b>Date:</b> -Enter today's date here-<br>
-                  <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
-                  <b>Description of design efforts:</b><br>
-                  <b> What I worked on this week: </b>
-                  <b> Things I learned this week: </b>
-                  <b> Challenges: </b>
-                  <b> Next week's tasks: </b>
-                  
-                  <img style="display: block; margin-left: auto; margin-right: auto;" src="IMAGE_URL_HERE" height="350" width="400"></img> 
-                  --> 
-            <br>
-        </div>
-
-		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
-		<div id="footer"></div>
+		    <h4>Week 5:</h4>
+          <b>Date: </b>09/20<br>
+          <b>Total hours: </b>7<br>
+          <b>Description of design efforts:</b><br> 
+          <b>What I worked on this week: </b>I started working on USART to help Abhay since he was having problems with transmitting and receiving data from the STM32 and the computer terminal. We were able to successfully debug it and transmitted "HELLO" from the STM32 and received it on the computer terminal and hence now we have a fully functioning USART. I also worked on getting the the LDR sensor to send its data to the STM32 using the circuit in the image above and decode it. We will use the LDR sensor for sensing ambient light data and use it to automatically adjust the brightness of the mirror.<br>
+          <b>Things I learned this week: </b>I learnt a lot about the USART protocol since I was only familiar with UART.<br>
+          <b>Challenges: </b>Unfamiliarity with USART protocol made it difficult to debug but I was familiar with UART so it made it a lot easier to understand the synchronous and asynchronous things used in USART.<br>
+          <b>Next week's tasks: </b>I will begin working on integrating the code for USART and will test sending sensor data over it.<br><br>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="Team/progress/img/initusart.png" height="400" width="600"></img><br>
+      </div>
+  		<div id="footer"></div>
     </div>
-</div>
-
-<!--JS-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#header").load("header.html");
-	$("#menu").load("navbar.html");
-	$("#footer").load("footer.html");
-});
-</script>
+  </div>
 </body>
 </html>
