@@ -128,11 +128,11 @@
           <b>Date: </b>11/08<br>
           <b>Total hours: </b>8<br>
           <b>Description of design efforts:</b><br>
-          <b>What I worked on this week: </b>I worked on soldering the remaining parts (STM32F0 chip, surface mounts, capacitors, barrel jack, header pins, etc...) onto the main PCB with Rtvik and Abhay. We were successful in soldering everything onto the main PCB except the crystal oscialltor since we did not have that part yet.<br>
-          <b>Things I learned this week: </b>I learnt how to drag solder since we had to do that in order to solder the STM32F0 chip onto the PCB.<br>
-          <b>Challenges: </b>After soldering everything, we had to test if the whole main PCB was working so we first tested out the voltage going inside the barrel jack and that was fine but the output of the barrel jack had a voltage of ~0.8V which is not correct. It should have been 3.3V. We asked Joe about it and he said that something might have shorted probably.<br>
-          <b>Next week's tasks: </b>Unsoldering everything from the main PCB and shifting and soldering everything on another PCB and testing again if the voltage coming out of barrel jack is correct.<br><br>
-          <img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/yvOekuJ.jpg" width="400" height="400"></img><br>
+          <b>What I worked on this week: </b>I worked on removing everything from our previous main PCB and resoldering everything to the new PCB with Abhay and Rtvik. We also fixed the problem we were having regarding the 0.8V output... We realized we soldered the chip in the wrong orientation. But we soldered it in the right orientation on the new main PCB. We checked power and ground and they were working as expected. Then we connected the sensor PCB with the main PCB and to the Jetson Nano and tried testing it. Everything worked and we are getting the sensor values outputed to the terminal on the Jetson.<br>
+          <b>Things I learned this week: </b>I learnt how to program the main PCB using the STM32F0DISCOVERY Kit.<br>
+          <b>Challenges: </b>The main challenge that I faced this week was how to program the main PCB using the STM32F0DISCOVERY Kit. Luckily, we found a document on the ECE 36200 website detailing how to do so.<br>
+          <b>Next week's tasks: </b>To start packaging for our project including getting a TV monitor for testing, making the frame which requires woodworking, and refining the sensor values for better results.<br><br>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/yvOekuJ.jpg" width="400" height="450"></img><br>
       </div>
   		<div id="footer"></div>
     </div>
